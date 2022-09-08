@@ -1,0 +1,40 @@
+.App {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 200px auto;
+}
+
+.Input {
+    margin-bottom: 20px;
+}
+
+.Table {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1em;
+    width: 100%;
+}
+
+.Table,
+tr {
+    border: 1px solid;
+}
+
+.Table:nth-child(odd) {
+    background-color: #eee;
+}
+
+.Table td {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
