@@ -7,8 +7,29 @@
     margin: 200px auto;
 }
 
-.Input {
+.Input input,
+.Input button {
     margin-bottom: 20px;
+    padding: 15px;
+}
+
+button {
+    color: white;
+    font-size: medium;
+    border: none;
+    font-weight: 900;
+}
+
+.dBtn {
+    background-color: red;
+}
+
+.eBtn {
+    background-color: blue;
+}
+
+#aBtn {
+    background-color: green;
 }
 
 .Table {
@@ -18,18 +39,27 @@
     width: 100%;
 }
 
-.Table,
-td {
+
+/*.Table,
+.Table td {
     border: 1px solid;
+}*/
+
+tr {
+    border-bottom: 1px solid #ddd;
 }
 
-.Table:nth-child(odd) {
+tr:nth-child(even) {
     background-color: #eee;
 }
 
-.Table td div {
+tr:hover {
+    background-color: #D6EEEE;
+}
+
+.Table td {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 4fr 1fr 1fr;
     gap: 1em;
     width: 100%;
 }

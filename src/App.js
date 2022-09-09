@@ -17,41 +17,42 @@ function App() {
         <
         input type = "text"
         name = ""
-        placeholder = 'Enter Data To Store'
+        placeholder = 'Enter Data To Store /Edit'
         onChange = {
             (x) => setInput(x.target.value)
         }
         / > <
         button type = "button"
+        id = 'aBtn'
         onClick = {
             () => {
                 dispatch({
-                        type: add,
-                        payload: Input
-                    })
-                    //Add(Input)
-                    //console.log("Added")
+                    type: add,
+                    payload: Input
+                })
+
 
             }
         } > Add < /button> < /
         div > <
         table className = 'Table' >
-
         <
-        th > Data < /th>  <
         tr >
         <
-        td > {
+        th > Data < /th>  < /
+        tr > {
             Data.map(e =>
                 <
-                div >
+                tr >
+                <
+                td >
 
                 <
                 p > { e } < /p> <
                 button type = "button"
+                className = 'eBtn'
                 onClick = {
                     () =>
-                    //console.log(Data.indexOf(e))
                     dispatch({
                         type: edit,
                         payload: Input,
@@ -59,24 +60,23 @@ function App() {
                     })
                 } > Edit < /button> <
                 button type = "button"
+                className = 'dBtn'
                 onClick = {
                     () =>
                     dispatch({
                         type: delet,
                         payload: e
                     })
-                    //console.log("delete")
                 } > Delete < /button>
 
 
                 <
-                /div>
+                /td> < /
+                tr >
             )
         }
 
         <
-        /td> < /
-        tr > <
         /table> < /
         div >
     );
